@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robert Dover's 3D Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Robert Dover</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h2 id="typed-title"></h2>
+      <p id="typed-desc"></p>
+    </div>
+    <div class="hero-image-container">
+      <img src="picture.png" alt="Robert Dover" class="hero-image" />
+      <!-- Smaller, floating GitHub logo inside the image container for better alignment -->
+      <a href="https://github.com/robertdover2004" target="_blank" class="cube github-cube" aria-label="Visit my GitHub">
+        <svg width="48" height="48" viewBox="0 0 98 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="49" cy="48" r="48" fill="#181818" stroke="#00bfff" stroke-width="2"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M49 20C33.536 20 21 32.536 21 48.064c0 12.4 8.064 22.912 19.248 26.624 1.408.256 1.92-.608 1.92-1.344 0-.672-.032-2.88-.032-5.248-7.84 1.696-9.504-3.392-9.504-3.392-1.28-3.232-3.136-4.096-3.136-4.096-2.56-1.76.192-1.728.192-1.728 2.816.192 4.288 2.88 4.288 2.88 2.496 4.288 6.56 3.04 8.16 2.336.256-1.792.96-3.04 1.76-3.744-6.24-.704-12.8-3.136-12.8-13.952 0-3.072 1.088-5.6 2.88-7.584-.288-.704-1.248-3.552.272-7.408 0 0 2.352-.752 7.712 2.88a26.6 26.6 0 0 1 7.008-.944c2.384.016 4.784.32 7.008.944 5.36-3.632 7.712-2.88 7.712-2.88 1.52 3.856.56 6.704.272 7.408 1.792 1.984 2.88 4.512 2.88 7.584 0 10.848-6.56 13.232-12.816 13.92.992.864 1.856 2.56 1.856 5.184 0 3.744-.032 6.768-.032 7.696 0 .736.512 1.6 1.92 1.344C68.944 70.976 77 60.464 77 48.064 77 32.536 64.464 20 49 20z" fill="#00bfff"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>I am passionate about building scalable, efficient, and visually compelling websites. With a foundation in front-end and back-end technologies, I focus on bringing ideas to life with clean code and stunning UI/UX.</p>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>3D Portfolio Card</h3>
+        <p>A 3D rotating card to highlight developer profiles using CSS 3D transforms.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Responsive Blog</h3>
+        <p>A modern blog with a content management system, built using Flask and SQLite.</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Robert Dover. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
