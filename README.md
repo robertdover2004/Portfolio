@@ -38,11 +38,12 @@ Text & Details: Edit index.html and script.js to update your name, about section
 Style & Theme: Modify style.css to change the color scheme, layout, or animations.
 
 📁 Project Structure
-Portfolio
+📦 Portfolio/
 ├── index.html       # Main HTML file
 ├── style.css        # Styling and animations
 ├── script.js        # JavaScript for interactivity
 └── picture.png      # Your profile image
+
 
 👤 Author
 Developed by Robert Dover
