@@ -1,0 +1,280 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #181818, #232526, #00bfff, #181818);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease infinite;
+  color: white;
+  line-height: 1.6;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00bfff;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar a {
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 10%;
+  min-height: 100vh;
+  background: #181818;
+  position: relative;
+  perspective: 1200px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 80px 0 #00bfff33;
+  overflow: visible;
+}
+
+.hero-content {
+  flex: 1 1 320px;
+  min-width: 300px;
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+}
+
+.hero-content h2 span {
+  color: #00bfff;
+}
+
+.hero-content p {
+  margin-top: 1rem;
+  max-width: 500px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(145deg, #202020, #2c2c2c);
+  transform: rotateX(30deg) rotateY(30deg);
+  animation: spin 10s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.cube:hover {
+  box-shadow: 0 0 40px #00bfff, 0 0 20px #00bfff inset;
+}
+
+.cube svg {
+  width: 96px;
+  height: 96px;
+  display: block;
+}
+
+.hero-image-container {
+  width: 300px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  margin-left: 2rem;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  border-radius: 32px;
+  box-shadow: 0 12px 48px rgba(0,191,255,0.18), 0 2px 8px rgba(0,0,0,0.25);
+  transition: box-shadow 0.4s;
+  position: relative;
+}
+
+.hero-image {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0,191,255,0.25), 0 2px 8px rgba(0,0,0,0.25);
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s;
+  will-change: transform;
+  background: #222;
+  z-index: 2;
+}
+
+/* Smaller, floating GitHub logo with extra effects */
+.github-cube {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  background: transparent;
+  box-shadow: 0 0 24px #00bfff44;
+  border-radius: 50%;
+  animation: github-spin 6s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.github-cube:hover {
+  box-shadow: 0 0 40px #00bfff, 0 0 20px #00bfff inset;
+  transform: scale(1.15) rotateZ(8deg);
+}
+
+@keyframes github-spin {
+  0% { transform: rotateZ(0deg);}
+  100% { transform: rotateZ(360deg);}
+}
+
+/* Sections */
+section {
+  padding: 4rem 10%;
+}
+
+.about-section,
+.projects-section,
+.contact-section {
+  background: #1e1e1e;
+  margin-top: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.05);
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #262626;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.3);
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+form input,
+form textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #2c2c2c;
+  color: white;
+}
+
+form button {
+  background: #00bfff;
+  color: #000;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #009fd6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #141414;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+#typed-title {
+  color: #00bfff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #00334d33;
+}
+
+#typed-desc {
+  color: #e0e6eb;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-shadow: 0 1px 8px #00bfff22;
+  min-height: 2.5em; /* Prevents flicker/jump during erase */
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-600px) scale(1.3);}
+}
